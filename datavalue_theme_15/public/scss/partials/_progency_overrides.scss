@@ -1,0 +1,130 @@
+// Progency Overrides - Blowminded Desk
+
+// 1. Global Reset & Typography
+body {
+    background-color: var(--pro-bg) !important;
+    font-family: 'Readex Pro', sans-serif !important;
+    color: var(--pro-text) !important;
+}
+
+// 2. Navbar Redesign
+header.navbar {
+    background: var(--navbar-bg) !important;
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--pro-border) !important;
+    margin: 10px 20px 0 20px !important;
+    border-radius: 16px !important;
+    width: auto !important;
+    position: sticky;
+    top: 10px;
+    z-index: 1001;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+
+    .navbar-brand img {
+        height: 28px !important;
+    }
+
+    .form-control {
+        background: rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid var(--pro-border) !important;
+        border-radius: 99px !important;
+        color: white !important;
+
+        &:focus {
+            border-color: var(--pro-primary) !important;
+        }
+    }
+}
+
+// 3. Sidebar Redesign (Desk Sidebar)
+.layout-side-section {
+    padding-top: 20px !important;
+
+    .sidebar-item {
+        margin-bottom: 5px;
+
+        a {
+            border-radius: 12px;
+            color: var(--pro-text-muted) !important;
+            transition: all 0.2s ease;
+
+            &:hover,
+            &.active {
+                background: linear-gradient(90deg, rgba(127, 90, 240, 0.1) 0%, transparent 100%) !important;
+                color: var(--pro-primary) !important;
+                padding-left: 15px !important;
+            }
+
+            &.active {
+                font-weight: 600;
+                border-left: 3px solid var(--pro-primary);
+            }
+        }
+    }
+}
+
+// 4. Content Area
+.layout-main-section {
+    border: none !important;
+    background: transparent !important;
+}
+
+// 5. Card Modernization
+.frappe-card,
+.widget-group {
+    background: var(--pro-surface) !important;
+    border: 1px solid var(--pro-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+
+    .card-header {
+        border-bottom: 1px solid var(--pro-border) !important;
+    }
+}
+
+// 6. Buttons
+.btn-primary {
+    background: var(--pro-primary) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(127, 90, 240, 0.3);
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 15px rgba(127, 90, 240, 0.4);
+    }
+}
+
+// 7. Form Controls
+.form-control {
+    background-color: var(--pro-surface-light) !important;
+    border: 1px solid var(--pro-border) !important;
+    border-radius: 8px !important;
+    color: var(--pro-text) !important;
+
+    &:focus {
+        background-color: var(--pro-surface) !important;
+        border-color: var(--pro-primary) !important;
+        box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.2) !important;
+    }
+}
+
+// 8. List View
+.list-row {
+    background: var(--pro-surface) !important;
+    border-bottom: 1px solid var(--pro-border) !important;
+    transition: background 0.2s;
+
+    &:hover {
+        background: var(--pro-surface-light) !important;
+    }
+}
+
+.list-row-head {
+    background: var(--pro-bg) !important;
+    border-bottom: 1px solid var(--pro-border) !important;
+    color: var(--pro-text-muted) !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}

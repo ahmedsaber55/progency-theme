@@ -1,0 +1,21 @@
+// Progency Theme Variables (Blowminded)
+:root {
+    --pro-bg: #0a0a0c;
+    --pro-surface: #16161a;
+    --pro-surface-light: #242629;
+    --pro-primary: #7f5af0;
+    --pro-secondary: #2cb67d;
+    --pro-text: #fffffe;
+    --pro-text-muted: #94a1b2;
+    --pro-border: rgba(255, 255, 255, 0.08);
+
+    --navbar-bg: rgba(22, 22, 26, 0.8) !important;
+    --sidebar-bg: rgba(22, 22, 26, 0.8) !important;
+    --card-bg: var(--pro-surface) !important;
+
+    // Glass
+    --glass-blur: blur(20px);
+}
+
+// Typography
+$font-stack: 'Readex Pro', 'Inter', sans-serif;
