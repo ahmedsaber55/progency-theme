@@ -6645,114 +6645,136 @@ body.frappe-rtl .frappe-control[data-fieldtype=Select] .control-input select, bo
   }
 }
 
-body {
+:root,
+[data-theme=light],
+[data-theme=dark] {
+  --pro-bg: #0a0a0c;
+  --pro-surface: rgba(22, 22, 26, 0.9);
+  --pro-primary: #7f5af0;
+  --pro-text: #fffffe;
+  --navbar-bg: rgba(22, 22, 26, 0.82);
+}
+
+body,
+body[data-theme] {
   background-color: var(--pro-bg) !important;
-  font-family: "Readex Pro", sans-serif !important;
   color: var(--pro-text) !important;
 }
 
 header.navbar {
   background: var(--navbar-bg) !important;
-  backdrop-filter: var(--glass-blur);
-  border-bottom: 1px solid var(--pro-border) !important;
-  margin: 10px 20px 0 20px !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 16px !important;
-  width: auto !important;
-  position: sticky;
-  top: 10px;
+  margin: 12px 20px 0 20px !important;
+  width: calc(100% - 40px) !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
   z-index: 1001;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
 }
-header.navbar .navbar-brand img {
-  height: 28px !important;
-}
-header.navbar .form-control {
-  background: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid var(--pro-border) !important;
-  border-radius: 99px !important;
-  color: white !important;
-}
-header.navbar .form-control:focus {
-  border-color: var(--pro-primary) !important;
+
+.layout-main-section,
+.page-container {
+  padding-top: 20px !important;
+  margin-top: 60px !important;
 }
 
 .layout-side-section {
-  padding-top: 20px !important;
+  background: transparent !important;
+  padding-left: 20px !important;
+  padding-top: 30px !important;
 }
 .layout-side-section .sidebar-item {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .layout-side-section .sidebar-item a {
-  border-radius: 12px;
-  color: var(--pro-text-muted) !important;
-  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: #94a1b2 !important;
+  padding: 10px 15px !important;
 }
-.layout-side-section .sidebar-item a:hover, .layout-side-section .sidebar-item a.active {
-  background: linear-gradient(90deg, rgba(127, 90, 240, 0.1) 0%, transparent 100%) !important;
-  color: var(--pro-primary) !important;
-  padding-left: 15px !important;
+.layout-side-section .sidebar-item a:hover {
+  background: rgba(127, 90, 240, 0.15) !important;
+  color: #fff !important;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(127, 90, 240, 0.2);
 }
 .layout-side-section .sidebar-item a.active {
-  font-weight: 600;
-  border-left: 3px solid var(--pro-primary);
-}
-
-.layout-main-section {
-  border: none !important;
-  background: transparent !important;
+  background: var(--pro-primary) !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(127, 90, 240, 0.5);
 }
 
 .frappe-card,
 .widget-group {
-  background: var(--pro-surface) !important;
-  border: 1px solid var(--pro-border) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  background: #16161a !important;
+  background: rgba(22, 22, 26, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
+.frappe-card .widget-head,
 .frappe-card .card-header,
+.widget-group .widget-head,
 .widget-group .card-header {
-  border-bottom: 1px solid var(--pro-border) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+.frappe-card .widget-head .widget-title,
+.frappe-card .card-header .widget-title,
+.widget-group .widget-head .widget-title,
+.widget-group .card-header .widget-title {
+  color: #fffffe !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+.frappe-card .widget-body,
+.frappe-card .card-body,
+.widget-group .widget-body,
+.widget-group .card-body {
+  color: #94a1b2 !important;
+}
+.frappe-card a,
+.frappe-card .link-content,
+.widget-group a,
+.widget-group .link-content {
+  color: #fffffe !important;
+}
+.frappe-card a:hover,
+.frappe-card .link-content:hover,
+.widget-group a:hover,
+.widget-group .link-content:hover {
+  color: var(--pro-primary) !important;
 }
 
-.btn-primary {
-  background: var(--pro-primary) !important;
-  border: none !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 10px rgba(127, 90, 240, 0.3);
+.shortcut-widget-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
 }
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(127, 90, 240, 0.4);
+.shortcut-widget-box .widget-title {
+  color: #fff !important;
+}
+.shortcut-widget-box:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--pro-primary) !important;
+}
+
+.page-head {
+  background: transparent !important;
+  border-bottom: none !important;
 }
 
 .form-control {
-  background-color: var(--pro-surface-light) !important;
-  border: 1px solid var(--pro-border) !important;
-  border-radius: 8px !important;
-  color: var(--pro-text) !important;
+  background-color: #010101 !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
 }
 .form-control:focus {
-  background-color: var(--pro-surface) !important;
   border-color: var(--pro-primary) !important;
-  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.2) !important;
-}
-
-.list-row {
-  background: var(--pro-surface) !important;
-  border-bottom: 1px solid var(--pro-border) !important;
-  transition: background 0.2s;
-}
-.list-row:hover {
-  background: var(--pro-surface-light) !important;
-}
-
-.list-row-head {
-  background: var(--pro-bg) !important;
-  border-bottom: 1px solid var(--pro-border) !important;
-  color: var(--pro-text-muted) !important;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.5px;
+  box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.25) !important;
 }
 
 /*# sourceMappingURL=datavalue_theme.bundle.css.map */
